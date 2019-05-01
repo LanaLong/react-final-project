@@ -22,6 +22,7 @@ class MenuAppBar extends PureComponent {
   handleClick = () => {};
 
   render() {
+    const { classes } = this.props;
     return (
       <AppBar position="static" color="default">
         <Toolbar>

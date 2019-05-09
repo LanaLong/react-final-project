@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from "react";
 import propTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
+import SelectBlock from "../SelectBlock";
+import PaperSheet from "../PaperSheet";
 import Map from "../Map";
 
 const styles = {

@@ -1,4 +1,5 @@
-export const token = "my-token";
+export const token =
+  "pk.eyJ1IjoibGFubG9uZyIsImEiOiJjanY4bWZhOXkwZ2d1NGVtanZlc2xwcHBrIn0.g045vURpuA9xr91DP69qCQ";
 
 export const getMapData = element => ({
   container: element,

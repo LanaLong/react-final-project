@@ -1,5 +1,5 @@
 import React from "react";
-import MenuAppBar from "./components/MenuAppBar";
+import Header from "./components/Header";
 import Layout from "./components/Layout";
 
 const style = {
@@ -12,8 +12,8 @@ const style = {
 
 const App = () => (
   <div style={style}>
-    <MenuAppBar />
-    <Layout />
+    <Header/>
+    <Layout/>
   </div>
 );
 

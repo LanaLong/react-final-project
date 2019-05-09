@@ -7,7 +7,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import Fields from "../Fields";
+import fieldTemplate from "../FieldTemplate";
 import { Redirect } from "react-router-dom";
 
 const styles = theme => ({
@@ -71,14 +71,14 @@ class Login extends React.Component {
               onSubmit={handleSubmit(val => this.handleSubmit(val))}
             >
               <Field
-                component={Fields}
+                component={fieldTemplate}
                 label="Имя пользователя"
                 placeholder="Имя пользователя"
                 name="login"
                 type="text"
               />
               <Field
-                component={Fields}
+                component={fieldTemplate}
                 label="Пароль"
                 placeholder="Пароль"
                 name="password"

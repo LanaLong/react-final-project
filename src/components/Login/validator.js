@@ -1,4 +1,4 @@
-export const formValidation = values => {
+export const myValidator = (values) => {
   const errors = {};
   const emptyMessage = "Это обязательное поле";
   if (!values.login) {

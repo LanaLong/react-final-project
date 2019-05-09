@@ -48,36 +48,30 @@ class Profile extends Component {
     });
   };
 
+
   render() {
     const { classes } = this.props;
     const { isAlert } = this.state;
     return (
       <div className={classes.container}>
         <Paper className={classes.root} elevation={1}>
-          <Typography
-            variant="h4"
-            component="h2"
-            className={classNames(classes.pos, classes.title)}
-          >
+          <Typography variant="h4" component="h2" className={classNames(classes.pos, classes.title)}>
             Профиль
           </Typography>
           <Typography variant={!isAlert ? "h6" : "subtitle1"} component="p">
-            {!isAlert
-              ? "Способ оплаты"
-              : "Платёжные данные обновлены. Теперь вы можете заказывать такси."}
+            {!isAlert ? "Способ оплаты" : "Платёжные данные обновлены. Теперь вы можете заказывать такси."}
           </Typography>
-          {!isAlert ? (
-            <ReduxForm alertHandle={this.showAlert} />
-          ) : (
-            <Button
+          {!isAlert
+            ? <ReduxForm alertHandle={this.showAlert}/>
+            : <Button
               className={classes.buttonToMap}
               variant="outlined"
               color="primary"
               onClick={this.showAlert}
             >
-              <NavLink to="/map">Перейти на карту</NavLink>
+              <NavLink to='/map'>Перейти на карту</NavLink>
             </Button>
-          )}
+          }
         </Paper>
       </div>
     );

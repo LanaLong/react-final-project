@@ -6,7 +6,7 @@ const style = {
   color: "red"
 };
 
-const Fields = props => {
+const fieldTemplate = props => {
   const {
     input,
     meta: { touched, error, invalid },
@@ -22,13 +22,15 @@ const Fields = props => {
         {...input}
         {...rest}
       />
-      {input.name === "cvv" && (!touched || !invalid) && <p>Needs digits</p>}
+      {input.name === "cvv" && (!touched || !invalid) && (
+        <p>Последние три цифры на оборотной стороне карты</p>
+      )}
       {touched && error && <p style={style}>{error}</p>}
     </div>
   );
 };
 
-Fields.propTypes = {
+fieldTemplate.propTypes = {
   input: propTypes.object.isRequired,
   touched: propTypes.bool,
   error: propTypes.string,
@@ -36,4 +38,4 @@ Fields.propTypes = {
   rest: propTypes.object
 };
 
-export default Fields;
+export default fieldTemplate;

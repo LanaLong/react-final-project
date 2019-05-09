@@ -8,7 +8,4 @@ const mapStateFromProps = state => ({
   route: getRoute(state)
 });
 
-export default connect(
-  mapStateFromProps,
-  null
-)(MapLayout);
+export default connect(mapStateFromProps, null)(MapLayout);

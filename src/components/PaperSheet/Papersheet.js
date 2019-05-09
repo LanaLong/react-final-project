@@ -26,10 +26,17 @@ function PaperSheet(props) {
   const { classes } = props;
   return (
     <Paper className={classes.root} elevation={1}>
-      <Typography variant="h4" component="h2" className={classes.pos}>
+      <Typography
+        variant="h4"
+        component="h2"
+        className={classes.pos}
+      >
         Заполните платежные данные
       </Typography>
-      <Typography component="p" className={classes.pos}>
+      <Typography
+        component="p"
+        className={classes.pos}
+      >
         Укажите информацию о банковской карте, чтобы сделать заказ.
       </Typography>
       <NavLink to="/profile">

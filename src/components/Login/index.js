@@ -1,16 +1,16 @@
 import { reduxForm } from "redux-form";
 import { connect } from "react-redux";
-import { getProfile, saveProfile } from "../../modules/Profile";
+import { loginIn, getAuth } from "../../modules/Auth";
+import Login from "./Login";
 import { myValidator } from "./validator";
-import ReduxForm from "./ReduxForm";
 
 const mapStateFromProps = state => ({
-  initialValues: getProfile(state)
+  isAuthorized: getAuth(state)
 });
 
-const mapDispatchFromProps = { saveProfile };
+const mapDispatchFromProps = { loginIn };
 
 export default connect(mapStateFromProps, mapDispatchFromProps)(reduxForm({
-  form: "paymentForm",
+  form: "loginForm",
   validate: myValidator
-})(ReduxForm));
+})(Login));

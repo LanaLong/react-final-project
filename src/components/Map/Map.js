@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import mapboxgl from "mapbox-gl";
-import { getFlyToData, getLayerData, getMapData, token } from "./mapConfig";
+import { getFlyToData, getLayerData, getMapData, token } from "./configMap";
 
 const style = {
   width: "100%",
@@ -12,7 +12,7 @@ const style = {
   right: 0
 };
 
-class MapBoxField extends PureComponent {
+class MapMaBox extends PureComponent {
   mapContainer = React.createRef();
   map = null;
   id = null;
@@ -43,8 +43,8 @@ class MapBoxField extends PureComponent {
   };
 
   render() {
-    return <div style={style} ref={this.mapContainer} />;
+    return <div style={style} ref={this.mapContainer}></div>;
   }
 }
 
-export default MapBoxField;
+export default MapMaBox;

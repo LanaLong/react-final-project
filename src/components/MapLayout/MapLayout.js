@@ -27,9 +27,12 @@ class MapLayout extends Component {
     return (
       <Fragment>
         <div className={classes.root}>
-          <Map route={route} />
+          <Map route={route}/>
           <div className={classes.messageBlock}>
-            {isMap ? <SelectBlock /> : <PaperSheet />}
+            {isMap
+              ? <SelectBlock/>
+              : <PaperSheet/>
+            }
           </div>
         </div>
       </Fragment>

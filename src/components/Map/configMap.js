@@ -27,7 +27,7 @@ export const getLayerData = (id, coords) => ({
     "line-cap": "round"
   },
   paint: {
-    "line-color": "#009EAB",
+    "line-color": "#9b2d30",
     "line-width": 8
   }
 });

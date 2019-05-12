@@ -17,9 +17,9 @@ class Layout extends Component {
             startUrl="/login"
             isAuthorized={isAuthorized}
           />
-          <Route path="/login" component={Login}/>
-          {isAuthorized && <Route path="/profile" component={Profile}/>}
-          <Redirect to="/login"/>
+          <Route path="/login" component={Login} />
+          {isAuthorized && <Route path="/profile" component={Profile} />}
+          <Redirect to="/login" />
         </Switch>
       </>
     );
